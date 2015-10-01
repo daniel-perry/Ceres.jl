@@ -128,10 +128,11 @@ unsafe_store!(parameterpointers[2], 0.0::Cdouble, 1)
 
 for i=0:num_observations-1
   problemaddresidualblock(problem,
-                          expres,   # Cost function
+                          #expres,   # Cost function
+                          exponentialresidual,   # Cost function
                           data[(2*i)+1:(2*i)+2], # Points to the (x,y) measurement
-                          C_NULL,                  # No loss function 
-                          zeros(Float64,1),                  # No loss function user data
+                          #C_NULL,                  # No loss function 
+                          #zeros(Float64,1),                  # No loss function user data
                           1,                     # Number of residuals
                           2,                     # Number of parameter blocks
                           parametersizes,
