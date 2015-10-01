@@ -1,7 +1,4 @@
 # This is a translation from c into julia of the curve_fitting.c example from the Ceres examples
-#
-# Copyright (c) 2015 Daniel Perry
-# MIT License
 
 using Ceres
 

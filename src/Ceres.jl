@@ -1,8 +1,3 @@
-# Wrapper for Ceres solver
-#
-# Copyright (c) 2015 Daniel Perry
-# MIT License
-
 module Ceres
 
 export init, createproblem, problemaddresidualblock, solve, freeproblem
@@ -58,9 +53,6 @@ end
 function freeproblem(problem)
   ccall( (:ceres_free_problem, "libceres"), Void, (Ptr{Void},), problem )
 end
-
-#end # module
-
 
 
 end # module
